@@ -1,0 +1,20 @@
+Set up your local server:
+
+1. Validate that php is installed on your box:
+    
+       php -v
+
+   If it's not, go get it.
+
+2. Set up a local test server in the directory of file you'd like to run:
+
+       php -S localhost:8000
+
+3. Connect to server by typing the following in your browser's URL bar:
+
+       localhost:8000/{target_file}
+   
+   It's important to note that the local server adopts the directory
+   structure around it. So as long as your target file in the top level
+   of the server directory, any file paths that were hardcoded into the
+   file should be all set.
