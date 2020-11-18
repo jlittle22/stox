@@ -37,3 +37,30 @@ it's best to exclude those specific lines of code and leave a TODO
 comment indicating what needs to be done in that line. Build
 everything else! Add placeholders as necessary. Just make it easy
 to plug in the right DB functions and get it working. 
+
+## Notes 
+* Social media cross platforming (Spotify x Apple Music, Facebook x Snapchat,
+  etc)
+* Stock API to practice investing as a web app
+
+## Web Radio Player w/ Video
+
+### Spotify API: 
+* Get user data like most played
+
+### YouTube API (Embedded YouTube Player):
+* Play videos of those Songs
+
+## Practice Stocks
+
+### Stock API (tbd):
+* Simulate buying and selling stocks at certain times 
+* Display charts of various stocks
+
+### DB:
+* Collect user's networth and investments 
+* Manage user login and registration
+
+## Room Reservation / Covid Test Scheduling 
+* Collect availabilities and schedule tests/reservations in least populated
+  time slots
