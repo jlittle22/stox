@@ -30,10 +30,10 @@
    file should be all set.
 
 
-   ## Re: Databases
+## Re: Databases
 
-   We won't be able to access server side databases from our code, so
-   it's best to exclude those specific lines of code and leave a TODO
-   comment indicating what needs to be done in that line. Build
-   everything else! Add placeholders as necessary. Just make it easy
-   to plug in the right DB functions and get it working. 
+We won't be able to access server side databases from our code, so
+it's best to exclude those specific lines of code and leave a TODO
+comment indicating what needs to be done in that line. Build
+everything else! Add placeholders as necessary. Just make it easy
+to plug in the right DB functions and get it working. 
