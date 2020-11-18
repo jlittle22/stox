@@ -1,4 +1,14 @@
-Set up your local server:
+# Comp 20 Final Project
+
+## Requirements
+
+* Must use HTML/CSS/Javascript and/or jQuery
+* Must use a database
+* Must use a server side program - you my use PHP or  node.js / Heroku to accomplish this
+* Must use an external API
+
+
+## Set up your local server
 
 1. Validate that php is installed on your box:
     
@@ -14,13 +24,14 @@ Set up your local server:
 
        localhost:8000/{target_file}
    
-   It's important to note that the local server adopts the directory
-   structure around it. So as long as your target file in the top level
+   It's important to note that the local server **adopts the directory
+   structure around it**. So as long as your target file in the top level
    of the server directory, any file paths that were hardcoded into the
    file should be all set.
 
 
-   Re: Databases -
+   ## Re: Databases
+
    We won't be able to access server side databases from our code, so
    it's best to exclude those specific lines of code and leave a TODO
    comment indicating what needs to be done in that line. Build
