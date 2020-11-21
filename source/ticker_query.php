@@ -57,12 +57,18 @@ foreach ($objectsArray as $obj) {
 	if (strlen($name) > 25) {
 	    $name = substr($name, 0, 20) . " ...";
 	}
-	$price = json_decode(get_quote($ticker))->{"Global Quote"}->{"05. price"};
+	$quote = json_decode(get_quote($ticker))->{"Global Quote"};
+	$price = $quote->{"05. price"};
     $price = number_format((float)$price, 2, '.', '');
+    $change = (float)$quote->{"09. change"};
+    $color = "var(--green1);";
+    if ($change < 0) {
+        $color = "var(--red);";
+    }
 	$html = "<div class='result'>
                 	<div class='ticker'>$ticker</div>
                 	<div class='company'>$name</div>
-                	<div class='price'>\$$price</div>
+                	<div class='price' style='color: $color'>\$$price</div>
             </div>";
     array_push($html_arr, $html);
 }
