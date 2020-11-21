@@ -1,0 +1,129 @@
+@font-face {
+    font-family: festive;
+    src: url(Festive-PersonalUse.otf);
+}
+
+@font-face {
+    font-family: brass;
+    src: url(brass.otf);
+}
+
+:root {
+    /* Colors: */
+    --green1: #22cd99;
+    --dark-green: #013e1d;
+    --white: #ffffff;
+    --red: #f45532;
+}
+
+.background {
+	background-color: var(--green1);
+}
+
+h1 {
+	font-family: festive;
+	font-size: 100px;
+	color: var(--white);
+	text-align: center;
+}
+
+h2 {
+	font-family: brass;
+	font-size: 40px;
+	color: var(--white);
+	text-align: center;
+}
+
+p {
+	font-family: brass;
+	font-size: 15px;
+	color: var(--white);
+}
+
+a {
+	cursor: pointer;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+::placeholder { 
+  color:  var(--white);
+  opacity: 1; 
+}
+
+input[type=text], input[type=password] {
+    width: 300px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 30px;
+    font-family: brass;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	border: 1px solid var(--dark-green);
+	outline: none;
+}
+
+input[type=submit] {
+	width: 150px;
+	height: 45px;
+	margin-top: 10px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: brass;
+	text-align: center;
+	border: none;
+	color: var(--green1);
+	background-color: var(--white);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.user_cred {
+	text-align: center;
+}
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+}
+
+.page_cont {
+	display: block;
+	width: 300px;
+	margin: auto;
+}
+
+.error {
+	font-family: brass;
+	font-size: 15px;
+	color: var(--red);
+}
+
+.row {
+	width: 100vw;
+	height: 40vh;
+	display: flex;
+}
+
+.col {
+	position: relative;
+	display: block;
+	float: left;
+	width: 48%;
+	margin: 2vh auto;
+	height: 36vh;
+	background-color: rgba(0, 0, 0, .1);
+	border-radius: 5px;
+}
