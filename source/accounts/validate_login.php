@@ -10,7 +10,20 @@
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-    } 
+    }
+
+    if (strlen($_GET["username"]) == 0) {
+      $_SESSION['failure'] = "Enter a username.";
+      header("Location: login.php");
+      exit;
+    }
+
+    if (strlen($_GET["password"]) == 0) {
+      $_SESSION['failure'] = "Enter a password.";
+      header("Location: login.php");
+      exit;
+    }
+
 
     $un = $conn->real_escape_string($_GET["username"]);
     $pw = hash("sha256", $_GET["password"]);
@@ -22,9 +35,10 @@
     if ($result->num_rows > 0) {
       $_SESSION['logged_in'] = TRUE;
       $_SESSION['user'] = $un;
-      header("Location: private_content.php");
+      header("Location: dashboard.php");
     } else {
       $_SESSION['logged_in'] = FALSE;
+      $_SESSION['failure'] = "Incorrect username and password combination.";
       header("Location: login.php");
     }
 

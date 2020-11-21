@@ -28,7 +28,7 @@
         exit;
     }
 
-    if (strlen($pw) < 5) {
+    if (strlen($_POST["password"]) < 5) {
         $_SESSION["failure"] = "Password must be longer than 5 chars.";
         header("Location: new.php");
         exit;
@@ -43,7 +43,8 @@
         exit;
     }
 
-    $sql = "INSERT INTO user_credentials (username, password) VALUES ('$un', '$pw')";
+    $sql = "INSERT INTO user_credentials (username, password, cash)" . 
+           " VALUES ('$un', '$pw', 50000.0)";
 
     if ($conn->query($sql) === TRUE) {
       header("Location: login.php");
