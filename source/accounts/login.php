@@ -12,6 +12,7 @@
         	border: 2px solid red;
         	margin: auto;
         }
+
     </style>
 </head>
 <body class="background">

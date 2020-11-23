@@ -41,6 +41,7 @@
 
         input[type=text] {
 			margin: 0 10px;
+			width: 45%;
         }
 
 		input[type=submit] {
@@ -48,7 +49,7 @@
 			width: 15%;
 		}
 
-		#search_results {
+		.stock_list {
 			position: absolute;
 			display: block;
 			background-color: rgba(0, 0, 0, 0.1);
@@ -70,6 +71,10 @@
 			margin: 10px 20px 0 0; 
 			border-radius: 2px;
 			height: 6vh;
+		}
+
+		.result:hover {
+			cursor: pointer;
 		}
 
 		.ticker {
@@ -113,7 +118,110 @@
 			right: 10px;
         }
 
+        .modal_back {
+        	cursor: default;
+        	display: none;
+        	z-index: 1;
+        	position: fixed;
+        	left: 0;
+        	top: 0;
+        	width: 100%;
+        	height: 100%;
+        	background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal_content {
+        	display: block;
+        	position: relative;
+        	z-index: 2;
+            width: 50vw;
+            height: 50vh;
+            margin: 25vh 25vw;
+            background-color: var(--white);
+            border-radius: 5px;
+        }
+
+        .modal_data {
+        	z-index: 3;
+        	display: block;
+        	position: absolute;
+        	left: 10px;
+        	top: 10px;
+        	right: 10px;
+        	bottom: 60px;
+        	background-color: var(--green1);
+        	border-radius: 5px;
+        	overflow-y: scroll;
+        }
+
+        .stock_purchase {
+        	z-index: 3;
+        	display: block;
+        	position: absolute;
+        	left: 10px;
+        	right: 10px;
+        	bottom: 10px;
+        }
+
+        .close {
+        	cursor: pointer;
+        	display: inline-block;
+        	z-index: 4;
+        	position: absolute;
+        	font-family: brass;
+        	border: none;
+        	color: var(--red);
+        	background-color: var(--white)
+        	height: 40px;
+        	font-size: 40px;
+        	right: 10px;
+        	bottom: 0px;
+        }
+
+        #no_results {
+        	text-align: center;
+        	font-size: 25px;
+        	color: rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+        	display: block;
+        	position: absolute;
+        	margin: 0;
+        	top: 10px;
+        	left: 10px;
+        	right: 10px;
+	        font-size: 3vw;
+
+        }
+
 	</style>
+    <script 
+        type="text/javascript" 
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+    	function open_buy_view(elem) {
+            elem.getElementsByClassName("modal_back")[0].style.display = "block";
+    	}
+
+    	function close_buy_view() {
+    		var modals = document.getElementsByClassName("modal_back");
+            for (var i = 0; i < modals.length; i++) {
+            	modals[i].style.display = "none";
+            }
+    	}
+ 
+        $.ajax({
+                type: "GET",
+                url: "display_owned_stocks.php",
+                success: function(data) {
+                    console.log(data);
+                    $('#owned_stocks').html(data);
+                }
+        });
+
+    </script>
 </head>
 <body class="background">
     <h1 style="margin: 0;">Stox</h1>
@@ -122,7 +230,7 @@
     	<div class="col">
     		<div class="dashboard_item">
     			<form action="ticker_query.php" method="GET">
-    				<input 
+    				<input
     				    type="text" 
     				    name="ticker_query"
     				    placeholder="AAPL" 
@@ -132,17 +240,23 @@
     				<input type="submit" name="ticker_submit" value="Search">
     			</form>
     		</div> 
-    		<div id="search_results">
+    		<div class="stock_list">                
                 <?php
-                    if (isset($_SESSION["ticker_res"])) {
+                    if (!empty($_SESSION["ticker_res"])) {
                         foreach($_SESSION["ticker_res"] as $html) {
                     	    echo $html;
                         }
+                    } else {
+                    	echo "<p id='no_results'>No search results.</p>";
                     }
                 ?>
     	    </div>
     	</div>
-    	<div class="col">Sell Stocks</div>
+    	<div class="col">
+    		<h2>Your Stocks</h2>
+    		<div class="stock_list" id="owned_stocks">
+    		</div>
+    	</div>
     </div>
 
     <div class="row">
@@ -159,3 +273,7 @@
     </div>
 </body>
 </html>
+
+<?php
+    unset($_SESSION['owned_stocks']);
+?>
