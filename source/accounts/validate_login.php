@@ -35,6 +35,9 @@
     if ($result->num_rows > 0) {
       $_SESSION['logged_in'] = TRUE;
       $_SESSION['user'] = $un;
+      $res_row = mysqli_fetch_assoc($result);
+      $_SESSION['cash'] = $res_row['cash'];
+      $_SESSION['joined'] = $res_row['joined'];
       header("Location: dashboard.php");
     } else {
       $_SESSION['logged_in'] = FALSE;

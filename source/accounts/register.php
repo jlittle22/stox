@@ -42,9 +42,10 @@
         header("Location: new.php");
         exit;
     }
-
-    $sql = "INSERT INTO user_credentials (username, password, cash)" . 
-           " VALUES ('$un', '$pw', 50000.0)";
+     
+    $date = date("Y-m-d");
+    $sql = "INSERT INTO user_credentials (username, password, cash, joined)" . 
+           " VALUES ('$un', '$pw', 50000.0, '$date')";
 
     if ($conn->query($sql) === TRUE) {
       header("Location: login.php");
