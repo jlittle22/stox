@@ -1,50 +1,7 @@
-# Comp 20 Final Project
+# Stox - Practice Stock Trading
 
-## Requirements
+## Description
 
-* Must use HTML/CSS/Javascript and/or jQuery
-* Must use a database
-* Must use a server side program - you my use PHP or  node.js / Heroku to accomplish this
-* Must use an external API
+Stox is a web application that supports users in educational (and risk-free) stock trading. Users start with a hypothetical allowance of $50,000 with which they can buy and sell shares of publicly traded companies and ETFs. The Stox dashboard tracks asset growth, presents real-time (ish) market data on different securities, and provides the user with up-to-date business news that might be relevant to their trading decisions.
 
-
-## Set up your local server
-
-1. Validate that php is installed on your box:
-    
-       php -v
-
-   If it's not, go get it.
-
-2. Set up a local test server in the directory of file you'd like to run:
-
-       php -S localhost:8000
-
-3. Connect to server by typing the following in your browser's URL bar:
-
-       localhost:8000/{target_file}
-   
-   It's important to note that the local server **adopts the directory
-   structure around it**. So as long as your target file in the top level
-   of the server directory, any file paths that were hardcoded into the
-   file should be all set.
-
-
-## Re: Databases
-
-We won't be able to access server side databases from our code, so
-it's best to exclude those specific lines of code and leave a TODO
-comment indicating what needs to be done in that line. Build
-everything else! Add placeholders as necessary. Just make it easy
-to plug in the right DB functions and get it working. 
-
-## Practice Stocks
-
-### Stock API (Alpha Vantage):
-* Simulate buying and selling stocks at certain times 
-* Display charts of various stocks
-
-### DB:
-* Collect user's networth and investments 
-* Manage user login and registration
-
+## Infrastructure
