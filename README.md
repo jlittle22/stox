@@ -6,10 +6,10 @@ Stox is a web application that supports users in educational (and risk-free) sto
 
 ## Usage
 ### Create an Account
-Go to https://comp20assignments.000webhostapp.com/new.php and create an account. Although the passwords are hashed before being stored in the DB, it's obviously best to use a password that you would not care about being exposed.
+Go to https://johnsnlittle.com/stox/new.php and create an account. Although the passwords are hashed before being stored in the DB, it's obviously best to use a password that you would not care about being exposed.
 
 ### Login
-Once registered, you should be redirected to a login page. If not, go to https://comp20assignments.000webhostapp.com/login.php and enter the username and password that you just created.
+Once registered, you should be redirected to a login page. If not, go to https://johnsnlittle.com/stox/login.php and enter the username and password that you just created.
 
 ### Buy and Sell
 Enter the ticker symbol or name of any security that you'd like to buy into the Search bar. Click on one of the results to learn more and to buy shares.
