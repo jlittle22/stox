@@ -6,8 +6,6 @@ Stox is a web application that supports users in educational (and risk-free) sto
 
 ## Usage
 ### Create an Account
-<a href="https://johnsnlittle.com/stox/new.php" target="_blank">this page</a>
-
 Go to https://johnsnlittle.com/stox/new.php and create an account. Although the passwords are hashed before being stored in the DB, it's obviously best to use a password that you would not care about being exposed.
 
 ### Login
