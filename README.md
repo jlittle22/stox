@@ -8,8 +8,11 @@ Stox is a web application that supports users in educational (and risk-free) sto
 
 ### Front End
 The Stox front end is simply HTML, CSS, and Javascript with no additional frameworks or libraries (other than jQuery). The UI is designed to be easily maleable. A single line change in the site.css file can alter the color scheme across the application. The UI is divided into 4 components as shown below: the Search, Your Stocks, News, and Profile.
+
 ![Screenshot](dashboard.png)
+
 Any security that is owned or searched for will present a modal of relevant information to the user when clicked. Clicking news articles redirects the user to the article in a different tab.
+
 ![Screenshot](modal.png)
 
 ### Back End
