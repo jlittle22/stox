@@ -31,4 +31,4 @@ Any security that is owned or searched for will present a modal of relevant info
 PHP is used for server-side operations include API calls, DB access, and a simple user account system. Two MySQL databases support the application - one for user account management and the other tracking equity ownership and partial purchase records across all users.
 
 ### Data Access
-The AlpaVantage API (https://www.alphavantage.co) provides nearly real-time data (actual real-time service costs much more money than a side project warrants). The News API (https://newsapi.org) provides up-to-date business news.
+The AlphaVantage API (https://www.alphavantage.co) provides nearly real-time data (actual real-time service costs much more money than a side project warrants). The News API (https://newsapi.org) provides up-to-date business news.
