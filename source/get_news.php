@@ -2,7 +2,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, [
-	    CURLOPT_URL => "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=60431960b82d40a5a0477fd57c1b156e",
+	    CURLOPT_URL => "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=NOTAREALKEY:)",
 	    CURLOPT_RETURNTRANSFER => true,
 	    CURLOPT_FOLLOWLOCATION => true,
 	    CURLOPT_ENCODING => "",

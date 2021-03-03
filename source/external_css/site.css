@@ -16,6 +16,11 @@
     --red: #f45532;
 }
 
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
 .background {
 	background-color: var(--green1);
 }
@@ -113,7 +118,7 @@ input[type=submit] {
 
 .row {
 	width: 100vw;
-	height: 40vh;
+	height: 314px;
 	display: flex;
 }
 
@@ -122,8 +127,9 @@ input[type=submit] {
 	display: block;
 	float: left;
 	width: 48%;
-	margin: 2vh auto;
-	height: 36vh;
+	margin: 20px auto 0 auto;
+	height: 294px; /* 36vw */
 	background-color: rgba(0, 0, 0, .1);
 	border-radius: 5px;
 }
+

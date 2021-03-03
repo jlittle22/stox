@@ -8,7 +8,7 @@
          $input = curl_escape($curl, $ticker);
 
         curl_setopt_array($curl, [
-	        CURLOPT_URL => "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$input&apikey=W7H5Z6GSOUUIEI6Q",
+	        CURLOPT_URL => "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$input&apikey=NOTAREALKEY:)",
 	        CURLOPT_RETURNTRANSFER => true,
 	        CURLOPT_FOLLOWLOCATION => true,
 	        CURLOPT_ENCODING => "",
@@ -47,9 +47,9 @@
 	$cost = $price * $quantity;
 
     $servername = "localhost";
-    $username = "id14883417_root";
+    $username = "u406651462_root";
     $password = "DBpass333!!!";
-    $dbname = "id14883417_final";
+    $dbname = "u406651462_final";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 

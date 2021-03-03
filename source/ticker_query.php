@@ -8,7 +8,7 @@ function get_quote($ticker) {
     $input = curl_escape($curl, $ticker);
 
     curl_setopt_array($curl, [
-	    CURLOPT_URL => "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$input&apikey=W7H5Z6GSOUUIEI6Q",
+	    CURLOPT_URL => "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$input&apikey=NOTAREALKEY:)",
 	    CURLOPT_RETURNTRANSFER => true,
 	    CURLOPT_FOLLOWLOCATION => true,
 	    CURLOPT_ENCODING => "",

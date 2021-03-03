@@ -12,14 +12,19 @@
 	<title>Dashboard | Stox</title>
 	<style type="text/css">
 		.logout {
-			position: absolute;
-			bottom: 10px;
-			width: 100%;
 			display: block;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
 		    text-align: center;
-		    margin-left: auto;
-		    margin-right: auto;
 		}
+ 
+        a {
+            display: block;
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
 
 		.dashboard_item {
 			position: absolute;
@@ -751,8 +756,6 @@
               </div>";
         echo $html;
     }
-
- 
 ?>
 
 </body>
